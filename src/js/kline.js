@@ -39,7 +39,8 @@ export default class Kline {
         this.language = "zh-cn";
         this.theme = "dark";
         this.ranges = ["1w", "1d", "1h", "30m", "15m", "5m", "1m", "line"];
-        this.showTrade = true;
+        // this.showTrade = true;
+        this.showTrade = false;
         this.tradeWidth = 250;
         this.socketConnected = false;
         this.enableSockjs = true;
@@ -600,6 +601,11 @@ export default class Kline {
                     $(Kline.instance.element).css({visibility: 'visible', height: Kline.instance.height + 'px'});
                 }
             });
+
+            $(".chart_toolbar_diagram").click(function () {
+                $(".chart_toolbar_diagram").removeClass('selected');
+                $(this).addClass('selected'); 
+            })
 
         })
 

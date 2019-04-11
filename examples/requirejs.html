@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>K线图</title>
-    <link href="/src/css/main.css" rel="stylesheet"/>
+    <!-- <link href="/src/css/main.css" rel="stylesheet"/> -->
+    <link href="../src/css/main.css" rel="stylesheet"/>
     <script src="../lib/require.js"></script>
     <style type="text/css">
         .kline {
@@ -55,11 +56,11 @@
             symbol: "BTC",
             symbolName: "BTC/USD",
             type: "poll", // poll/socket
-            url: "/examples/mock.json",
+            url: "./mock.json",
             limit: 1000,
             intervalTime: 5000,
             debug: true,
-            showTrade: true
+            showTrade: false
         });
 
         kline.draw();

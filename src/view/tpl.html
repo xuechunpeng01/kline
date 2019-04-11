@@ -143,16 +143,104 @@
                 </li>
             </ul>
         </div>
-        <div id="chart_show_indicator" class="chart_toolbar_button chart_str_indicator_cap selected">技术指标</div>
-        <div id="chart_show_tools" class="chart_toolbar_button chart_str_tools_cap">画线工具</div>
-        <div id="chart_toolbar_theme">
+        <!-- <div id="chart_show_indicator" class="chart_toolbar_button chart_str_indicator_cap selected">技术指标</div> -->
+        <!-- 技术指标 -->
+        <div id="chart_show_indicator" class="chart_toolbar_button"></div>
+        <!-- 更多 -->
+        <div id="chart_dropdown_settings" class="chart_toolbar_button">
+            <div class="chart_dropdown_t"><a class="chart_str_settings"><!-- 更多 --></a></div>
+            <div class="chart_dropdown_data" style="margin-left: -142px;">
+                <table>
+                    <tbody>
+                    <tr id="chart_select_main_indicator">
+                        <td class="chart_str_main_indicator">主指标</td>
+                        <td>
+                            <ul>
+                                <li><a name="MA" class="selected">MA</a></li>
+                                <li><a name="EMA" class="">EMA</a></li>
+                                <li><a name="BOLL" class="">BOLL</a></li>
+                                <li><a name="SAR" class="">SAR</a></li>
+                                <li><a name="NONE" class="">None</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr id="chart_select_chart_style">
+                        <td class="chart_str_chart_style">主图样式</td>
+                        <td>
+                            <ul>
+                                <li><a class="selected">CandleStick</a></li>
+                                <li><a>CandleStickHLC</a></li>
+                                <li><a class="">OHLC</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr id="chart_select_theme" style="display: none;">
+                        <td class="chart_str_theme">主题选择</td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a name="dark" class="chart_icon chart_icon_theme_dark selected"></a>
+                                </li>
+
+                                <li>
+                                    <a name="light" class="chart_icon chart_icon_theme_light"></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr id="chart_enable_tools" style="display: none;">
+                        <td class="chart_str_tools">画线工具</td>
+                        <td>
+                            <ul>
+                                <li><a name="on" class="chart_str_on">开启</a></li>
+                                <li><a name="off" class="chart_str_off selected">关闭</a></li>
+
+                            </ul>
+
+                        </td>
+                    </tr>
+                    <tr id="chart_enable_indicator" style="display: none;">
+                        <td class="chart_str_indicator">技术指标</td>
+                        <td>
+                            <ul>
+                                <li><a name="on" class="chart_str_on selected">开启</a></li>
+                                <li><a name="off" class="chart_str_off">关闭</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <ul>
+                                <li>
+                                    <a id="chart_btn_parameter_settings" class="chart_str_indicator_parameters">指标参数设置</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 全屏 -->
+        <div id="chart_updated_time" class="chart_toolbar_button" >
+            <div id="sizeIcon" class="chart_BoxSize"></div>
+        </div>
+        <!-- 蜡烛图/深度图 -->
+        <div class="chart_toolbar_diagram chart_toolbar_depth selected"><a>Depth</a></div>
+        <div class="chart_toolbar_diagram chart_toolbar_candle"><a>Candle</a></div>
+        
+        <!-- <div id="chart_show_tools" class="chart_toolbar_button chart_str_tools_cap">画线工具</div> -->
+        <!-- <div id="chart_toolbar_theme">
             <div class="chart_toolbar_label chart_str_theme_cap">
                 主题选择
             </div>
             <a name="dark" class="chart_icon chart_icon_theme_dark selected"></a>
             <a name="light" class="chart_icon chart_icon_theme_light"></a>
-        </div>
-        <div class="chart_dropdown" id="chart_dropdown_settings">
+        </div> -->
+        <!-- <div class="chart_dropdown" id="chart_dropdown_settings">
             <div class="chart_dropdown_t"><a class="chart_str_settings">更多</a></div>
 
             <div class="chart_dropdown_data" style="margin-left: -142px;">
@@ -229,9 +317,9 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
 
-        <div class="chart_dropdown" id="chart_language_setting_div" style="padding-left: 5px;">
+        <!-- <div class="chart_dropdown" id="chart_language_setting_div" style="padding-left: 5px;">
             <div class="chart_dropdown_t">
                 <a class="chart_language_setting">语言(LANG)</a>
             </div>
@@ -248,11 +336,11 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div id="chart_updated_time">
+        </div> -->
+        <!-- <div id="chart_updated_time">
             <div id="sizeIcon" class="chart_BoxSize"></div>
 
-        </div>
+        </div> -->
     </div>
                <!-- ToolPanel -->
     <div id="chart_toolpanel">

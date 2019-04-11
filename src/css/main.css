@@ -37,7 +37,7 @@ body {
 }
 
 #chart_dom_elem_cache {
-    *font-weight: bold;
+    /* *font-weight: bold; */
     position: absolute;
     visibility: hidden;
     z-index: -1
@@ -45,15 +45,16 @@ body {
 
 #chart_toolbar {
     border-bottom: 1px solid;
-    *font-weight: bold;
-    height: 29px;
+    /* *font-weight: bold; */
+    height: 34px;
     position: absolute;
     z-index: 3
 }
 
 .chart_container.dark #chart_toolbar {
-    background-color: #0a0a0a;
-    border-bottom-color: #404040
+    /* background-color: #0a0a0a; */
+    background-color: #242537;
+    border-bottom-color: #202130;
 }
 
 .chart_container.light #chart_toolbar {
@@ -187,7 +188,7 @@ body {
 }
 
 .chart_container.dark .chart_dropdown-hover.chart_dropdown_t {
-    background-color: #0a0a0a;
+    background-color: #242537;
     background-image: url("../img/dropup_w.png");
     background-position: right 8px;
     border-color: #606060;
@@ -195,12 +196,13 @@ body {
 }
 
 .chart_container.dark .chart_dropdown_data {
-    background-color: rgba(10, 10, 10, 0.8);
+    /* background-color: rgba(10, 10, 10, 0.8); */
+    background-color: #242537;
     border-color: #606060
 }
 
 .chart_container.dark .chart_dropdown_data td {
-    border-bottom-color: #404040;
+    /* border-bottom-color: #404040; */
     color: #e5e5e5
 }
 
@@ -213,7 +215,10 @@ body {
 }
 
 .chart_container.dark .chart_dropdown_data li a.selected {
-    color: #ffac00
+    /* color: #ffac00; */
+    color: #fff;
+    background-color: #CAAF80;
+    border-radius: 2px;
 }
 
 .chart_container.light .chart_dropdown_t {
@@ -271,17 +276,25 @@ body {
 }
 
 .chart_container .chart_toolbar_button {
-    border: 1px solid;
+    width: 16px;height: 16px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    float: left;
+    margin: 9px 8px;
+    position: relative;
+    z-index: 100;
+
+    /* border: 1px solid;
     cursor: pointer;
     float: left;
     margin: 3px 2px;
     padding: 3px 10px;
     position: relative;
-    z-index: 100
+    z-index: 100 */
 }
 
 .chart_container.dark .chart_toolbar_button {
-    border-color: #404040;
+    /* border-color: #404040; */
     color: #e5e5e5
 }
 
@@ -339,7 +352,9 @@ body {
 }
 
 .chart_container.dark .chart_toolbar_tabgroup li a {
-    color: #1987da
+    /* color: #1987da */
+    color: #fff;
+    font-weight: 300;
 }
 
 .chart_container.dark .chart_toolbar_tabgroup li a:hover {
@@ -347,7 +362,10 @@ body {
 }
 
 .chart_container.dark .chart_toolbar_tabgroup li a.selected {
-    color: #ffac00
+    /* color: #ffac00 */
+    color: #fff;
+    background-color: #CAAF80;
+    border-radius: 2px;
 }
 
 .chart_container.light .chart_toolbar_tabgroup li a {
@@ -440,9 +458,11 @@ body {
 }
 
 .chart_container #chart_updated_time {
-    float: right;
+    /* float: right;
     margin: 4px 3px;
-    padding: 3px 10px
+    padding: 3px 10px; */
+    float: left;
+    margin: 9px 8px;
 }
 
 .chart_container.dark #chart_updated_time {
@@ -488,7 +508,7 @@ body {
     border-radius: 4px;
     border: 1px solid;
     display: none;
-    *font-weight: bold;
+    /* *font-weight: bold; */
     position: absolute;
     padding: 3px 6px 4px 6px;
     margin-left: 36px;
@@ -502,17 +522,17 @@ body {
 }
 
 .chart_container.dark #chart_toolpanel {
-    background-color: #0a0a0a;
-    border-right-color: #404040
+    background-color: #242537;
+    /* border-right-color: #404040 */
 }
 
 .chart_container.dark .chart_toolpanel_icon {
     background-color: #0a0a0a;
-    border-color: #0a0a0a
+    border-color: #242537
 }
 
 .chart_container.dark .chart_toolpanel_button:hover .chart_toolpanel_icon {
-    background-color: #404040;
+    /* background-color: #404040; */
     border-color: #666
 }
 
@@ -524,7 +544,7 @@ body {
 .chart_container.dark .chart_toolpanel_tip {
     background-color: #ffac00;
     border-color: #ffac00;
-    color: #0a0a0a
+    color: #242537
 }
 
 .chart_container.light #chart_toolpanel {
@@ -645,7 +665,7 @@ body {
     border-top: 1px solid;
     cursor: default;
     display: none;
-    *font-weight: bold;
+    /* *font-weight: bold; */
     height: 22px;
     overflow: hidden;
     position: absolute;
@@ -678,8 +698,8 @@ body {
 }
 
 .chart_container.dark #chart_tabbar {
-    background-color: #0a0a0a;
-    border-top-color: #404040
+    background-color: #242537;
+    /* border-top-color: #404040 */
 }
 
 .chart_container.dark #chart_tabbar a {
@@ -877,7 +897,7 @@ body {
 }
 
 .trade_container.dark {
-    background: #0a0a0a;
+    background: #242537;
     color: #f1f1f1
 }
 
@@ -910,19 +930,19 @@ body {
 .m_rightbot {
     height: 22px;
     line-height: 22px;
-    border-top: 1px solid #404040;
+    /* border-top: 1px solid #404040; */
     width: 230px;
     text-align: right;
     padding-right: 20px;
-    background-color: #0a0a0a;
-    border-bottom-color: #404040
+    background-color: #242537;
+    /* border-bottom-color: #404040 */
 }
 
 .m_guadan {
     margin-top: 29px;
     overflow: hidden;
-    border-left: 1px solid #404040;
-    border-top: 1px solid #404040
+    /* border-left: 1px solid #404040; */
+    /* border-top: 1px solid #404040 */
 }
 
 .m_guadan a {
@@ -1256,3 +1276,37 @@ body {
     width: 20px;
     height: 20px
 }
+
+
+#kline_container{
+    background-color: #242537 !important;
+}
+#chart_overlayCanvas{
+    background-color: #242537 !important;
+}
+
+.chart_container .chart_toolbar_diagram{
+    width: 56px;
+    height: 24px;
+    float: right;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 6px;
+    background-color: #202130;
+}
+.chart_container .chart_toolbar_candle{
+    border-radius: 2px 0 0 2px;
+}
+.chart_container .chart_toolbar_depth{
+    margin-right: 18px;
+    border-radius: 0 2px 2px 0;
+}
+.chart_container .chart_toolbar_diagram.selected{
+    background-color: #CAAF80;
+}
+
+
+
+

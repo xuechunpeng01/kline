@@ -302,7 +302,7 @@ export class Control {
         toolBarRect.x = 0;
         toolBarRect.y = 0;
         toolBarRect.w = chartWidth;
-        toolBarRect.h = 29;
+        toolBarRect.h = 34;
         let toolPanelRect = {};
         toolPanelRect.x = 0;
         toolPanelRect.y = toolBarRect.h + 1;
@@ -376,8 +376,10 @@ export class Control {
         let periodsVertNW = periodsVert[0].offsetWidth;
         let periodsHorzNW = periodsVertNW + periodsHorz.offsetWidth;
         let showIndicNW = periodsHorzNW + showIndic.offsetWidth + 4;
-        let showToolsNW = showIndicNW + showTools.offsetWidth + 4;
-        let selectThemeNW = showToolsNW + selectTheme.offsetWidth;
+        // let showToolsNW = showIndicNW + showTools.offsetWidth + 4;
+        let showToolsNW = showIndicNW + 0 + 4;
+        // let selectThemeNW = showToolsNW + selectTheme.offsetWidth;
+        let selectThemeNW = showToolsNW + 0;
         let dropDownSettingsW = dropDownSettings.find(".chart_dropdown_t")[0].offsetWidth + 150;
         periodsVertNW += dropDownSettingsW;
         periodsHorzNW += dropDownSettingsW;
