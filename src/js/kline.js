@@ -305,15 +305,36 @@ export default class Kline {
                     $(this).next().removeClass("chart_dropdown-hover");
                     $(this).removeClass("chart_dropdown-hover");
                 });
-            $(".chart_dropdown_data")
+            $(".chart_container .chart_toolbar_button ")
                 .mouseover(function () {
-                    $(this).addClass("chart_dropdown-hover");
-                    $(this).prev().addClass("chart_dropdown-hover");
+                    let title = $(this).children(".chart_toolbar_button_title");
+                    let l = title.width()/2 - 8;
+                    title.css({"left": -l});
+                    title.addClass("chart_toolbar_button_hover");
                 })
                 .mouseout(function () {
-                    $(this).prev().removeClass("chart_dropdown-hover");
-                    $(this).removeClass("chart_dropdown-hover");
+                    $(this).children(".chart_toolbar_button_title").removeClass("chart_toolbar_button_hover");
                 });
+
+            $("#chart_dropdown_settings").click(function () {
+                let tab = $(this).children(".chart_dropdown_data");
+                if(tab.hasClass("chart_dropdown-hover")){
+                    tab.removeClass("chart_dropdown-hover")
+                }else{
+                    tab.addClass("chart_dropdown-hover");
+                }
+                // tab.prev().addClass("chart_dropdown-hover");
+            })
+
+            // $(".chart_dropdown_data")
+            //     .mouseover(function () {
+            //         $(this).addClass("chart_dropdown-hover");
+            //         $(this).prev().addClass("chart_dropdown-hover");
+            //     })
+            //     .mouseout(function () {
+            //         $(this).prev().removeClass("chart_dropdown-hover");
+            //         $(this).removeClass("chart_dropdown-hover");
+            //     });
             $("#chart_btn_parameter_settings").click(function () {
                 $('#chart_parameter_settings').addClass("clicked");
                 $(".chart_dropdown_data").removeClass("chart_dropdown-hover");
