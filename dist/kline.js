@@ -3839,11 +3839,10 @@ function () {
       if (__WEBPACK_IMPORTED_MODULE_0__kline__["a" /* default */].instance.data.trades && __WEBPACK_IMPORTED_MODULE_0__kline__["a" /* default */].instance.data.trades.length > 0) {
         __WEBPACK_IMPORTED_MODULE_1__kline_trade__["a" /* KlineTrade */].instance.pushTrades(__WEBPACK_IMPORTED_MODULE_0__kline__["a" /* default */].instance.data.trades);
         __WEBPACK_IMPORTED_MODULE_1__kline_trade__["a" /* KlineTrade */].instance.klineTradeInit = true;
-      }
+      } // if (Kline.instance.data.depths) {
+      //     KlineTrade.instance.updateDepth(Kline.instance.data.depths);
+      // }
 
-      if (__WEBPACK_IMPORTED_MODULE_0__kline__["a" /* default */].instance.data.depths) {
-        __WEBPACK_IMPORTED_MODULE_1__kline_trade__["a" /* KlineTrade */].instance.updateDepth(__WEBPACK_IMPORTED_MODULE_0__kline__["a" /* default */].instance.data.depths);
-      }
 
       Control.clearRefreshCounter();
 

@@ -165,9 +165,9 @@ export class Control {
             KlineTrade.instance.pushTrades(Kline.instance.data.trades);
             KlineTrade.instance.klineTradeInit = true;
         }
-        if (Kline.instance.data.depths) {
-            KlineTrade.instance.updateDepth(Kline.instance.data.depths);
-        }
+        // if (Kline.instance.data.depths) {
+        //     KlineTrade.instance.updateDepth(Kline.instance.data.depths);
+        // }
         Control.clearRefreshCounter();
 
         if (Kline.instance.type === 'poll') {
