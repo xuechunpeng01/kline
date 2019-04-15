@@ -349,106 +349,112 @@
                <!-- ToolPanel -->
     <div id="chart_toolpanel">
         <div class="chart_toolpanel_separator"></div>
+        <div class="chart_toolpanel_show">
+            <div class="triangle"></div>
+        </div>
+        <div class="chart_toolpanel_button_wrap">
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_Cursor" name="Cursor"></div>
+                <div class="chart_toolpanel_tip chart_str_cursor">
+                    光标
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_CrossCursor" name="CrossCursor"></div>
+                <div class="chart_toolpanel_tip chart_str_cross_cursor">
+                    十字光标
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_SegLine" name="SegLine"></div>
+                <div class="chart_toolpanel_tip chart_str_seg_line">
+                    线段
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_StraightLine" name="StraightLine"></div>
+                <div class="chart_toolpanel_tip chart_str_straight_line">
+                    直线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_RayLine" name="RayLine"></div>
+                <div class="chart_toolpanel_tip chart_str_ray_line">
+                    射线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_ArrowLine" name="ArrowLine"></div>
+                <div class="chart_toolpanel_tip chart_str_arrow_line">
+                    箭头
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_HoriSegLine" name="HoriSegLine"></div>
+                <div class="chart_toolpanel_tip chart_str_horz_seg_line">
+                    水平线段
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_HoriStraightLine" name="HoriStraightLine"></div>
+                <div class="chart_toolpanel_tip chart_str_horz_straight_line">
+                    水平直线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_HoriRayLine" name="HoriRayLine"></div>
+                <div class="chart_toolpanel_tip chart_str_horz_ray_line">
+                    水平射线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_VertiStraightLine" name="VertiStraightLine"></div>
+                <div class="chart_toolpanel_tip chart_str_vert_straight_line">
+                    垂直直线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_PriceLine" name="PriceLine"></div>
+                <div class="chart_toolpanel_tip chart_str_price_line">
+                    价格线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_TriParallelLine" name="TriParallelLine"></div>
+                <div class="chart_toolpanel_tip chart_str_tri_parallel_line">
+                    价格通道线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_BiParallelLine" name="BiParallelLine"></div>
+                <div class="chart_toolpanel_tip chart_str_bi_parallel_line">
+                    平行直线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_BiParallelRayLine" name="BiParallelRayLine"></div>
+                <div class="chart_toolpanel_tip chart_str_bi_parallel_ray">
+                    平行射线
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_DrawFibRetrace" name="DrawFibRetrace"></div>
+                <div class="chart_toolpanel_tip chart_str_fib_retrace">
+                    斐波纳契回调
+                </div>
+            </div>
+            <div class="chart_toolpanel_button">
+                <div class="chart_toolpanel_icon" id="chart_DrawFibFans" name="DrawFibFans"></div>
+                <div class="chart_toolpanel_tip chart_str_fib_fans">
+                    斐波纳契扇形
+                </div>
+            </div>
+            <div style="padding-left: 3px;padding-top: 10px;">
+                <button style="color: red;" id="clearCanvas" title="Clear All">X</button>
+            </div>
+            
+        </div>
 
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_Cursor" name="Cursor"></div>
-            <div class="chart_toolpanel_tip chart_str_cursor">
-                光标
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_CrossCursor" name="CrossCursor"></div>
-            <div class="chart_toolpanel_tip chart_str_cross_cursor">
-                十字光标
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_SegLine" name="SegLine"></div>
-            <div class="chart_toolpanel_tip chart_str_seg_line">
-                线段
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_StraightLine" name="StraightLine"></div>
-            <div class="chart_toolpanel_tip chart_str_straight_line">
-                直线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_RayLine" name="RayLine"></div>
-            <div class="chart_toolpanel_tip chart_str_ray_line">
-                射线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_ArrowLine" name="ArrowLine"></div>
-            <div class="chart_toolpanel_tip chart_str_arrow_line">
-                箭头
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_HoriSegLine" name="HoriSegLine"></div>
-            <div class="chart_toolpanel_tip chart_str_horz_seg_line">
-                水平线段
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_HoriStraightLine" name="HoriStraightLine"></div>
-            <div class="chart_toolpanel_tip chart_str_horz_straight_line">
-                水平直线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_HoriRayLine" name="HoriRayLine"></div>
-            <div class="chart_toolpanel_tip chart_str_horz_ray_line">
-                水平射线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_VertiStraightLine" name="VertiStraightLine"></div>
-            <div class="chart_toolpanel_tip chart_str_vert_straight_line">
-                垂直直线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_PriceLine" name="PriceLine"></div>
-            <div class="chart_toolpanel_tip chart_str_price_line">
-                价格线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_TriParallelLine" name="TriParallelLine"></div>
-            <div class="chart_toolpanel_tip chart_str_tri_parallel_line">
-                价格通道线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_BiParallelLine" name="BiParallelLine"></div>
-            <div class="chart_toolpanel_tip chart_str_bi_parallel_line">
-                平行直线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_BiParallelRayLine" name="BiParallelRayLine"></div>
-            <div class="chart_toolpanel_tip chart_str_bi_parallel_ray">
-                平行射线
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_DrawFibRetrace" name="DrawFibRetrace"></div>
-            <div class="chart_toolpanel_tip chart_str_fib_retrace">
-                斐波纳契回调
-            </div>
-        </div>
-        <div class="chart_toolpanel_button">
-            <div class="chart_toolpanel_icon" id="chart_DrawFibFans" name="DrawFibFans"></div>
-            <div class="chart_toolpanel_tip chart_str_fib_fans">
-                斐波纳契扇形
-            </div>
-        </div>
-        <div style="padding-left: 3px;padding-top: 10px;">
-            <button style="color: red;" id="clearCanvas" title="Clear All">X</button>
-        </div>
     </div>
     <div id="chart_canvasGroup" class="temp">
         <canvas class="chart_canvas" id="chart_mainCanvas" style="cursor: default;"></canvas>

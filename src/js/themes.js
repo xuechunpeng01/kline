@@ -63,20 +63,26 @@ export class DarkTheme extends Theme {
         this._colors = [];
 
         if (Kline.instance.reverseColor) {
-            this._colors[Theme.Color.Positive] = "#990e0e";
-            this._colors[Theme.Color.Negative] = "#19b34c";
+            // this._colors[Theme.Color.Positive] = "#990e0e";
+            this._colors[Theme.Color.Positive] = "#F46F6F";
+            // this._colors[Theme.Color.Negative] = "#19b34c";
+            this._colors[Theme.Color.Negative] = "#56B783";
             this._colors[Theme.Color.PositiveDark] = "#3b0e08";
             this._colors[Theme.Color.NegativeDark] = "#004718";
         } else {
-            this._colors[Theme.Color.Positive] = "#19b34c";
-            this._colors[Theme.Color.Negative] = "#990e0e";
+            // this._colors[Theme.Color.Positive] = "#19b34c";
+            this._colors[Theme.Color.Positive] = "#56B783";
+            // this._colors[Theme.Color.Negative] = "#990e0e";
+            this._colors[Theme.Color.Negative] = "#F46F6F";
             this._colors[Theme.Color.PositiveDark] = "#004718";
             this._colors[Theme.Color.NegativeDark] = "#3b0e08";
         }
         this._colors[Theme.Color.Unchanged] = "#fff";
-        this._colors[Theme.Color.Background] = "#0a0a0a";
+        // this._colors[Theme.Color.Background] = "#0a0a0a";
+        this._colors[Theme.Color.Background] = "#242537";
         this._colors[Theme.Color.Cursor] = "#aaa";
-        this._colors[Theme.Color.RangeMark] = "#f9ee30";
+        // this._colors[Theme.Color.RangeMark] = "#f9ee30";
+        this._colors[Theme.Color.RangeMark] = "#CAAF80";
         this._colors[Theme.Color.Indicator0] = "#ddd";
         this._colors[Theme.Color.Indicator1] = "#f9ee30";
         this._colors[Theme.Color.Indicator2] = "#f600ff";

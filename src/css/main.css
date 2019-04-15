@@ -298,7 +298,7 @@ body {
 .chart_container .chart_toolbar_button_title{
     display: none;
     position: absolute;
-    top: -26px;
+    top: 26px;
     left: 0;
     color: #fff;
     font-size: 12px;
@@ -496,9 +496,11 @@ body {
 
 #chart_toolpanel {
     border-right: 1px solid;
-    display: none;
+    /* display: none; */
     position: absolute;
-    width: 32px;
+    top: 34px;
+    /* width: 32px; */
+    width: 48px;
     z-index: 2
 }
 
@@ -509,7 +511,8 @@ body {
 
 #chart_toolpanel .chart_toolpanel_button {
     position: relative;
-    z-index: 100
+    z-index: 100;
+    margin-top: 5px;
 }
 
 #chart_toolpanel .chart_toolpanel_icon {
@@ -518,7 +521,8 @@ body {
     border: 1px solid;
     cursor: pointer;
     height: 16px;
-    margin: 1px 4px 1px 4px;
+    /* margin: 1px 4px 1px 4px; */
+    margin-left: 8px;
     padding: 3px;
     position: relative;
     width: 16px;
@@ -548,8 +552,8 @@ body {
 }
 
 .chart_container.dark .chart_toolpanel_icon {
-    background-color: #0a0a0a;
-    border-color: #242537
+    /* background-color: #0a0a0a; */
+    /* border-color: #242537 */
 }
 
 .chart_container.dark .chart_toolpanel_button:hover .chart_toolpanel_icon {
@@ -1300,10 +1304,10 @@ body {
 
 
 #kline_container{
-    background-color: #242537 !important;
+    /* background-color: #242537 !important; */
 }
 #chart_overlayCanvas{
-    background-color: #242537 !important;
+    /* background-color: #242537 !important; */
 }
 
 .chart_container .chart_toolbar_diagram{
@@ -1328,6 +1332,16 @@ body {
     background-color: #CAAF80;
 }
 
-
+#chart_toolpanel .chart_toolpanel_show{
+    width: 8px;
+    height: 24px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 49%;
+}
+#chart_toolpanel .chart_toolpanel_button_wrap{
+    display: inline;
+}
 
 

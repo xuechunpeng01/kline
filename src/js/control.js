@@ -296,7 +296,8 @@ export class Control {
         let toolPanel = $('#chart_toolpanel');
         let canvasGroup = $('#chart_canvasGroup');
         let tabBar = $('#chart_tabbar');
-        let toolPanelShown = toolPanel[0].style.display !== 'inline' ? false : true;
+        // let toolPanelShown = toolPanel[0].style.display !== 'inline' ? false : true;
+        let toolPanelShown = toolPanel.children('.chart_toolpanel_button_wrap')[0].style.display !== 'inline' ? false : true;
         let tabBarShown = tabBar[0].style.display !== 'block' ? false : true;
         let toolBarRect = {};
         toolBarRect.x = 0;
@@ -306,7 +307,8 @@ export class Control {
         let toolPanelRect = {};
         toolPanelRect.x = 0;
         toolPanelRect.y = toolBarRect.h + 1;
-        toolPanelRect.w = toolPanelShown ? 32 : 0;
+        // toolPanelRect.w = toolPanelShown ? 32 : 0;
+        toolPanelRect.w = toolPanelShown ? 48 : 8;
         toolPanelRect.h = height - toolPanelRect.y;
         let tabBarRect = {};
         tabBarRect.w = toolPanelShown ? chartWidth - (toolPanelRect.w + 1 ) : chartWidth;
@@ -476,7 +478,8 @@ export class Control {
                     $(this).addClass('selected');
                 }
             });
-            $('#chart_toolpanel')[0].style.display = 'inline';
+            // $('#chart_toolpanel')[0].style.display = 'inline';
+            $('.chart_toolpanel_button_wrap')[0].style.display = 'inline';
             if (ChartManager.instance._drawingTool === ChartManager.DrawingTool.Cursor) {
                 $('#chart_Cursor').parent().addClass('selected');
             } else if (ChartManager.instance._drawingTool === ChartManager.DrawingTool.CrossCursor) {
@@ -489,7 +492,8 @@ export class Control {
                     $(this).addClass('selected');
                 }
             });
-            $('#chart_toolpanel')[0].style.display = 'none';
+            // $('#chart_toolpanel')[0].style.display = 'none';
+            $('.chart_toolpanel_button_wrap')[0].style.display = 'none';
             ChartManager.instance.setRunningMode(ChartManager.instance._beforeDrawingTool);
             ChartManager.instance.redraw("All", true);
         }
