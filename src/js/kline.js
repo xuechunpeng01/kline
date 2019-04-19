@@ -38,7 +38,8 @@ export default class Kline {
         this.debug = true;
         this.language = "zh-cn";
         this.theme = "dark";
-        this.ranges = ["1w", "1d", "1h", "30m", "15m", "5m", "1m", "line"];
+        // this.ranges = ["1w", "1d", "1h", "30m", "15m", "5m", "1m", "line"];
+        this.ranges = ["1m","5m", "15m", "30m", "1h", "2h", "4h", "6h", "12h", "1d", "1w", "line"];
         // this.showTrade = true;
         this.showTrade = false;
         this.tradeWidth = 250;
@@ -354,15 +355,39 @@ export default class Kline {
             $("#close_settings").click(function () {
                 $('#chart_parameter_settings').removeClass("clicked");
             });
-            $(".chart_container .chart_toolbar_tabgroup a")
+            // $(".chart_container .chart_toolbar_tabgroup a")
+            //     .click(function () {
+            //         Control.switchPeriod($(this).parent().attr('name'));
+            //     });
+            $(".chart_container .chart_toolbar_tabgroup > li > a.triangle")
                 .click(function () {
-                    Control.switchPeriod($(this).parent().attr('name'));
-
+                    let state = $(this).next().hasClass("none");
+                    console.log($(this))
+                    if(state === false){
+                        $(this).next().addClass("none");
+                    }else{
+                        $(".chart_toolbar_periods_vert").addClass("none");
+                        $(this).next().removeClass("none")
+                    }
                 });
-            $("#chart_toolbar_periods_vert ul a").click(function () {
+            $(".chart_container .chart_toolbar_tabgroup li > a.nottri")
+                .click(function () {
+                    $(".chart_toolbar_periods_vert").addClass("none");
+                    Control.switchPeriod($(this).parent().attr('name'));
+                });
 
-                Control.switchPeriod($(this).parent().attr('name'));
+            // $(".chart_toolbar_periods_vert ul a").click(function () {
+            //     Control.switchPeriod($(this).parent().attr('name'));
 
+            // });
+            $(".chart_container .chart_toolbar_periods_vert ul a").click(function () {
+                let name = $(this).parent().attr('name');
+                // let text = $(this).text();
+                Control.switchPeriod(name);
+                $(this).parent().parent().parent().addClass("none");
+
+                // $(this).parent().parent().parent().css({'display':'none'});
+                // $(this).parent().parent().parent().prev().html('<a class="chart_str_period_'+name+'triangle selected">'+text+'</a>');
             });
 
             $(".market_chooser ul a").click(function () {
@@ -378,7 +403,7 @@ export default class Kline {
             //         }
             //     });
             // $('#chart_toolpanel')[0].style.display = 'inline';
-            $('.chart_toolpanel_button_wrap')[0].style.display = 'inline';
+            // $('.chart_toolpanel_button_wrap')[0].style.display = 'inline';
             $(".chart_toolpanel_show")
                 .click(function () {
                     if($('.chart_toolpanel_button_wrap')[0].style.display === 'inline'){

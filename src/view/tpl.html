@@ -32,7 +32,7 @@
     <div id="chart_toolbar">
         <div class="chart_toolbar_minisep"></div>
         <!-- Periods -->
-        <div class="chart_dropdown" id="chart_toolbar_periods_vert">
+        <!-- <div class="chart_dropdown" id="chart_toolbar_periods_vert">
             <div class="chart_dropdown_t"><a class="chart_str_period">周期</a></div>
             <div class="chart_dropdown_data" style="margin-left: -58px;">
                 <table>
@@ -96,8 +96,64 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div> -->
+        <div class="chart_time">Time</div>
         <div id="chart_toolbar_periods_horz">
+            <ul class="chart_toolbar_tabgroup" style="padding-left:5px; padding-right:11px;">
+                <li id="chart_period_1m_h" name="1m" style="display: none;">
+                    <a class="chart_str_period_1m triangle selected">1M</a>
+                    <div class="chart_toolbar_periods_vert none">
+                        <ul class="period_data">
+                            <li id="chart_period_1m_v" name="1m">
+                                <a class="chart_str_period_1m selected">1M</a>
+                            </li>
+                            <li id="chart_period_5m_v" name="5m">
+                                <a class="chart_str_period_5m">5M</a>
+                            </li>
+                            <li id="chart_period_15m_v" name="15m">
+                                <a class="chart_str_period_15m">15M</a>
+                            </li>
+                            <li id="chart_period_30m_v" name="30m">
+                                <a class="chart_str_period_30m">30M</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="chart_period_1h_h" name="1h" style="display: none;">
+                    <a class="chart_str_period_1h triangle">1H</a>
+                    <div class="chart_toolbar_periods_vert none">
+                        <ul class="period_data">
+                            <li id="chart_period_1h_v" name="1h">
+                                <a class="chart_str_period_1h selected">1H</a>
+                            </li>
+                            <li id="chart_period_2h_v" name="2h">
+                                <a class="chart_str_period_2h">2H</a>
+                            </li>
+                            <li id="chart_period_4h_v" name="4h">
+                                <a class="chart_str_period_4h">4H</a>
+                            </li>
+                            <li id="chart_period_6h_v" name="6h">
+                                <a class="chart_str_period_6h">6H</a>
+                            </li>
+                            <li id="chart_period_12h_v" name="12h">
+                                <a class="chart_str_period_12h">12H</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </li>
+                <li id="chart_period_1d_h" name="1d" style="display: none;">
+                    <a class="chart_str_period_1d nottri">1D</a>
+                </li>
+                <li id="chart_period_1w_h" name="1w" style="display: none;">
+                    <a class="chart_str_period_1w nottri">1W</a>
+                </li>
+                <li id="chart_period_line_h" name="line" style="display: none;">
+                    <a class="chart_str_period_line nottri">Line</a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div id="chart_toolbar_periods_horz">
             <ul class="chart_toolbar_tabgroup" style="padding-left:5px; padding-right:11px;">
                 <li id="chart_period_1w_h" name="1w" style="display: none;">
                     <a class="chart_str_period_1w">周线</a>
@@ -142,7 +198,7 @@
                     <a class="chart_str_period_line">分时</a>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <!-- <div id="chart_show_indicator" class="chart_toolbar_button chart_str_indicator_cap selected">技术指标</div> -->
         <!-- 技术指标 -->
         <div id="chart_show_indicator" class="chart_toolbar_button">
@@ -347,7 +403,7 @@
         </div> -->
     </div>
                <!-- ToolPanel -->
-    <div id="chart_toolpanel">
+    <!-- <div id="chart_toolpanel">
         <div class="chart_toolpanel_separator"></div>
         <div class="chart_toolpanel_show">
             <div class="triangle"></div>
@@ -455,7 +511,7 @@
             
         </div>
 
-    </div>
+    </div> -->
     <div id="chart_canvasGroup" class="temp">
         <canvas class="chart_canvas" id="chart_mainCanvas" style="cursor: default;"></canvas>
         <canvas class="chart_canvas" id="chart_overlayCanvas" style="cursor: default;"></canvas>

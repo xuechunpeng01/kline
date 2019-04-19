@@ -7,7 +7,7 @@ export class Chart {
 
     static strPeriod = {
         'zh-cn': {
-            'line': '(分时)',
+            'line': '(Line)',
             '1min': '(1分钟)',
             '5min': '(5分钟)',
             '15min': '(15分钟)',

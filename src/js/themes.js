@@ -74,8 +74,8 @@ export class DarkTheme extends Theme {
             this._colors[Theme.Color.Positive] = "#56B783";
             // this._colors[Theme.Color.Negative] = "#990e0e";
             this._colors[Theme.Color.Negative] = "#F46F6F";
-            this._colors[Theme.Color.PositiveDark] = "#004718";
-            this._colors[Theme.Color.NegativeDark] = "#3b0e08";
+            this._colors[Theme.Color.PositiveDark] = "rgba(86,183,131,0.4)";
+            this._colors[Theme.Color.NegativeDark] = "rgba(244,111,111,0.4)";
         }
         this._colors[Theme.Color.Unchanged] = "#fff";
         // this._colors[Theme.Color.Background] = "#0a0a0a";

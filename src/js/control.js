@@ -297,7 +297,8 @@ export class Control {
         let canvasGroup = $('#chart_canvasGroup');
         let tabBar = $('#chart_tabbar');
         // let toolPanelShown = toolPanel[0].style.display !== 'inline' ? false : true;
-        let toolPanelShown = toolPanel.children('.chart_toolpanel_button_wrap')[0].style.display !== 'inline' ? false : true;
+        // let toolPanelShown = toolPanel.children('.chart_toolpanel_button_wrap')[0].style.display !== 'inline' ? false : true;
+        let toolPanelShown = false;
         let tabBarShown = tabBar[0].style.display !== 'block' ? false : true;
         let toolBarRect = {};
         toolBarRect.x = 0;
@@ -375,7 +376,8 @@ export class Control {
         let showTools = $('#chart_show_tools')[0];
         let selectTheme = $('#chart_toolbar_theme')[0];
         let dropDownSettings = $('#chart_dropdown_settings');
-        let periodsVertNW = periodsVert[0].offsetWidth;
+        // let periodsVertNW = periodsVert[0].offsetWidth;
+        let periodsVertNW = 0;
         let periodsHorzNW = periodsVertNW + periodsHorz.offsetWidth;
         let showIndicNW = periodsHorzNW + showIndic.offsetWidth + 4;
         // let showToolsNW = showIndicNW + showTools.offsetWidth + 4;
@@ -493,7 +495,7 @@ export class Control {
                 }
             });
             // $('#chart_toolpanel')[0].style.display = 'none';
-            $('.chart_toolpanel_button_wrap')[0].style.display = 'none';
+            // $('.chart_toolpanel_button_wrap')[0].style.display = 'none';
             ChartManager.instance.setRunningMode(ChartManager.instance._beforeDrawingTool);
             ChartManager.instance.redraw("All", true);
         }
@@ -505,6 +507,7 @@ export class Control {
     }
 
     static switchIndic(name) {
+
         $('#chart_enable_indicator a').removeClass('selected');
         $("#chart_enable_indicator a[name='" + name + "']").addClass('selected');
         if (name === 'on') {
@@ -540,17 +543,29 @@ export class Control {
 
     static switchPeriod(name) {
         $(".chart_container .chart_toolbar_tabgroup a").removeClass("selected");
-        $("#chart_toolbar_periods_vert ul a").removeClass("selected");
-        $(".chart_container .chart_toolbar_tabgroup a").each(function () {
+        $(".chart_toolbar_periods_vert ul a").removeClass("selected");
+        $(".chart_container .chart_toolbar_tabgroup > li > a").each(function () {
             if ($(this).parent().attr('name') === name) {
                 $(this).addClass('selected');
             }
         });
-        $("#chart_toolbar_periods_vert ul a").each(function () {
+        $(".chart_toolbar_periods_vert ul li > a").each(function () {
             if ($(this).parent().attr('name') === name) {
+
+        console.info("HHHHHJJJ: " + name)
+
                 $(this).addClass('selected');
+                let text = $(this).text();
+                let classNames = $(this).parent().parent().parent().prev().attr("class");
+                let cn = classNames.split(" ")[0]
+
+                // $(this).parent().parent().parent().prev().replaceWith('<a class="chart_str_period_'+name+' triangle selected">'+text+'</a>');
+                $(this).parent().parent().parent().prev().removeClass(cn);
+                $(this).parent().parent().parent().prev().addClass('chart_str_period_'+name+' triangle selected');            
+                $(this).parent().parent().parent().prev().text(text);           
             }
         });
+
         ChartManager.instance.showCursor();
         Control.calcPeriodWeight(name);
         if (name === 'line') {
@@ -580,6 +595,8 @@ export class Control {
     }
 
     static switchSymbolSelected(symbol) {
+        console.info("ssssssss")
+
         Control.reset(symbol);
         $(".market_chooser ul a").removeClass("selected");
         $(".market_chooser ul a[name='" + symbol + "']").addClass("selected");
