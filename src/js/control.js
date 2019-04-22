@@ -211,8 +211,9 @@ export class Control {
         Control.switchSymbolSelected(symbol);
         let period = tmp.charts.period;
         Control.switchPeriod(period);
-        $('#chart_period_' + period + '_v a').addClass('selected');
-        $('#chart_period_' + period + '_h a').addClass('selected');
+        
+        // $('#chart_period_' + period + '_v a').addClass('selected');
+        // $('#chart_period_' + period + '_h a').addClass('selected');
         if (tmp.charts.indicsStatus === 'close') {
             Control.switchIndic('off');
         } else if (tmp.charts.indicsStatus === 'open') {
